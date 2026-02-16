@@ -1,25 +1,29 @@
 from infraestructura.file_manager import FileManager
+import os
+import time
 
-columnas_usuario = ['id', 'username', 'password', 'rol', 'nombres', 'apellidos']
-usuario_db = FileManager('usuarios.csv', columnas_usuario)
+def menu_principal():
+    os.system("cls")  # Limpiar la consola 
+    print("Bienvenido al sistema de gestión de usuarios")
+    print("1. Iniciar sesión")
+    print("2. Salir")
+    opcion = input("Seleccione una opción: ")
+    if opcion == '1':
+        iniciar_sesion()        
+    elif opcion == '2':
+        os.system("cls")
+        print("Saliendo del sistema. ¡Hasta luego!")        
+        time.sleep(2)
+        os._exit(0)
+    else:
+        print("Opción no válida. Intente nuevamente.")
+        time.sleep(2)
+        menu_principal()
 
-# 2. Generar un ID automático
-nuevo_id = usuario_db.obtener_nuevo_id()
-print(f"El próximo ID será: {nuevo_id}")
 
-# 3. Guardar un usuario de prueba (simulando Admin)
-nuevo_usuario = {
-    'id': nuevo_id,
-    'username': 'ADMIN2',
-    'password': '123',
-    'rol': 'Cliente',
-    'nombres': 'Jose',
-    'apellidos': 'Landaverde'
-}
+def iniciar_sesion():
+    return
+        
 
-usuario_db.agregar(nuevo_usuario)
-print("Usuario guardado.")
-
-# 4. Leer para verificar
-todos = usuario_db.leer_todos()
-print(todos)
+if __name__ == "__main__":
+    menu_principal()
