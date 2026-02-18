@@ -1,3 +1,5 @@
+import datetime
+
 class Usuario:
     def __init__(self, id, nombres, apellidos, password, rol, es_primer_ingreso=True, username=None):
         self.id = id
@@ -56,4 +58,38 @@ class Producto:
             'stock': self.stock,
             'categoria': self.categoria,
             'activo': self.activo
+        }
+    
+class Factura:
+    def __init__(self, id, cliente_username, total, fecha=None):
+        self.id = id
+        self.cliente_username = cliente_username        
+        self.total = float(total)
+        self.fecha = fecha if fecha else datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'cliente_username': self.cliente_username,
+            'total': self.total,
+            'fecha': self.fecha
+        }
+    
+class DetalleFactura:
+    def __init__(self, factura_id, producto_id,nombre_producto, cantidad, precio_unitario):        
+        self.factura_id = factura_id        
+        self.producto_id = producto_id
+        self.nombre_producto = nombre_producto
+        self.cantidad = int(cantidad)
+        self.precio_unitario = float(precio_unitario)
+        self.subtotal = self.cantidad * self.precio_unitario
+
+    def to_dict(self):
+        return {            
+            'factura_id': self.factura_id,
+            'producto_id': self.producto_id,
+            'nombre_producto': self.nombre_producto,
+            'cantidad': self.cantidad,
+            'precio_unitario': self.precio_unitario,
+            'subtotal': self.subtotal
         }
