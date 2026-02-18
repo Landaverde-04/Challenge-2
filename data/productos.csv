@@ -1,0 +1,22 @@
+id,nombre,precio,stock,categoria,activo
+1,Lechuga Romana,10.56,3,Verduras,True
+2,Pepino Cohombro,0.03,1,Verduras,False
+3,Leche Entera 1L,2.34,0,Lácteos,True
+4,Queso Fresco,5.5,10,Lácteos,True
+5,Yogurt Natural,1.20,0,Lácteos,False
+6,Filete de Res,15.90,8,Carnes,True
+7,Pechuga de Pollo,7.45,15,Carnes,True
+8,Zanahoria,0.85,40,Verduras,True
+9,Tomate Riñón,1.10,25,Verduras,False
+10,Mantequilla,2.15,0,Lácteos,False
+11,Chuleta de Cerdo,9.30,10,Carnes,True
+12,Brócoli,1.75,14,Verduras,True
+13,Crema de Leche,3.20,6,Lácteos,True
+14,Carne Molida,6.80,20,Carnes,True
+15,Espinaca,1.40,18,Verduras,True
+16,Salchicha Parrillera,4.50,22,Carnes,True
+17,Queso Mozzarella,8.90,5,Lácteos,True
+18,Cebolla Paiteña,0.95,50,Verduras,True
+19,Cordero Troceado,18.0,0,Carnes,True
+20,Pimiento verde,2,1,Verduras,True
+21,pryeba,2,1,Bebidas,False

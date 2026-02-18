@@ -1,0 +1,4 @@
+id,factura_id,producto_id,nombre_producto,cantidad,precio_unitario,subtotal
+,1,3,Leche Entera 1L,1,2.34,2.34
+,1,19,Cordero Troceado,4,18.0,72.0
+,2,4,Queso Fresco,2,5.5,11.0

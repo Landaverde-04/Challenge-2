@@ -1,0 +1,5 @@
+id,username,password,rol,nombres,apellidos,es_primer_ingreso
+1,LG1,PassAdmin2026,Administrador,Roberto Carlos,Lopez Garcia,False
+2,MS2,admin,Cliente,Ana Maria,Martinez Sanchez,False
+3,PR3,Recurrente99,Cliente,Juan Jose,Perez Rodriguez,False
+4,HE4,admin2,Cliente,Kevin Alexis,Hernandez Echeverria,False
